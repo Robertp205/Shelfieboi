@@ -1,0 +1,12 @@
+.yeet-box{
+    height: 30vh;
+    width: 30vw;
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-left: 60%;
+    border-radius: 7px
+
+}
