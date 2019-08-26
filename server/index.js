@@ -21,6 +21,7 @@ massive(CONNECTION_STRING).then(dbInstance => {
 app.get('/api/inventory', productCTRL.getInventory)
 app.post('/api/inventory', productCTRL.createProduct)
 app.put('/api/inventory/:id', productCTRL.updateProduct)
+app.put('/api/inventory/:id', productCTRL.deleteProduct)
 
 app.listen(8080, ()=> {
     console.log('Server is running!')

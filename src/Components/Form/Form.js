@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Form.css'
 import axios from 'axios'
+import Dashboard from '../Dashboard/Dashboard';
 
 export default class Form extends Component {
     constructor(){
@@ -68,6 +69,12 @@ export default class Form extends Component {
 
 
     render() {
+        const mapppedProducts = this.props.inventory.map((prod,i) => {
+                return (
+                    <Dashboard key={i} prod={prod}/>
+    
+                )
+            })
         
         return (
             <div className="yeet-box">
@@ -76,6 +83,8 @@ export default class Form extends Component {
                 <input placeholder='price'  onChange={()=> this.update_price}></input>
                 <button onClick={()=>this.resetState()}>Cancel</button>
                 <button onClick={()=> this.handleAddInventory()}>Add to Inventory</button>
+
+                {mapppedProducts}
             </div>
         )
     }
